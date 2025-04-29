@@ -30,7 +30,7 @@ pipeline{
 
 		}
 		}
-  /*
+  
  stage("deploy"){
 	   steps{
 
@@ -51,7 +51,7 @@ pipeline{
 	   
 		}
 		  
-	  }*/
+	  }
 
 /*stage(backup)
 		  {
