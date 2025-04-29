@@ -31,7 +31,7 @@ pipeline{
 		}
 		}
   
- stage("deploy"){
+/* stage("deploy"){
 	   steps{
 
       sshagent(['ec2-tomcat']) {
@@ -52,7 +52,7 @@ pipeline{
 		}
 		  
 	  }
-
+*/
 /*stage(backup)
 		  {
   steps{
