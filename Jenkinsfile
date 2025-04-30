@@ -26,19 +26,19 @@ pipeline{
        stage("package"){
 	    steps{
 		 sh 'mvn clean package'
-                 sh "mv target/*.war target/myweb.war"
+                 sh "mv target/*.war target/myapp.war"
 
 		}
 		}
   
-/* stage("deploy"){
+ stage("deploy"){
 	   steps{
 
       sshagent(['ec2-tomcat']) {
 
 	        sh """
                  
-            scp -o StrictHostKeyChecking=no target/myweb.war ec2-user@172.31.41.111:/home/ec2-user/tomcat/webapps/
+            scp -o StrictHostKeyChecking=no target/myapp.war ec2-user@172.31.41.111:/home/ec2-user/tomcat/webapps/
 
               ssh ec2-user@172.31.41.111 /home/ec2-user/tomcat/bin/shutdown.sh
                ssh ec2-user@172.31.41.111 /home/ec2-user/tomcat/bin/startup.sh
@@ -52,7 +52,7 @@ pipeline{
 		}
 		  
 	  }
-*/
+
 /*stage(backup)
 		  {
   steps{
